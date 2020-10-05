@@ -21,9 +21,15 @@ private fun removeCoveredIntervals(intervals: Array<IntArray>): Int {
 }
 
 fun main() {
-    println(removeCoveredIntervals(arrayOf(
-            intArrayOf(1,4),
-            intArrayOf(3,4),
-            intArrayOf(1,2)
-    )))
+    `assert for (1,4) (3,4) (1,2)`()
+}
+
+fun `assert for (1,4) (3,4) (1,2)`() {
+    val invervals = removeCoveredIntervals(arrayOf(
+        intArrayOf(1,4),
+        intArrayOf(3,4),
+        intArrayOf(1,2)
+    ))
+
+    assert(invervals == 1)
 }
